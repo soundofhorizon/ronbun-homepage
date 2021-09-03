@@ -96,12 +96,19 @@
 			}
 		</style>
 		<script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+		<script type="text/javascript">
+			const _sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+			function closePage(){
+				await _sleep(2000);
+				window.close();
+			}
+		</script>
 	</head>
 	<body>
 		<center>
 			<p class="title">TYPE-D3 e-learning</p>
 			<br>
-			<a href="https://soundofhorizon.github.io/ronbun-homepage/d3-description.html" class="btn btn-svg" rel="noopener noreferrer" onClick="window.close();">
+			<a href="https://soundofhorizon.github.io/ronbun-homepage/d3-description.html" class="btn btn-svg" rel="noopener noreferrer" onClick="closePage();">
 				<svg>
 					<rect x="102" y="2" rx="0" fill="none" width=200 height="50"></rect>
 				</svg>
