@@ -96,6 +96,13 @@
 			}
 		</style>
 		<script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+		<script type="text/javascript">
+			const _sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+			function closePage(){
+				await _sleep(2000);
+				window.close();
+			}
+		</script>
 	</head>
 	<body>
 		<center>
@@ -106,7 +113,7 @@
 <p class="description">5. 動画の再生する際はサイト左側にある「再生」と書かれているボタンを押してください。</p>
             <p class="description">6. 今回のコンテンツを第三者に無断公開することを禁じます。</p>
 			<br>
-			<a href="https://ronbunc2.herokuapp.com/" class="btn btn-svg" target="_blank" rel="noopener noreferrer" onClick="window.close();">
+			<a href="https://ronbunc2.herokuapp.com/" class="btn btn-svg" target="_blank" rel="noopener noreferrer" onClick="closePage();">
 				<svg>
 					<rect x="102" y="2" rx="0" fill="none" width=200 height="50"></rect>
 				</svg>
